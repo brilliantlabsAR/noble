@@ -1,7 +1,7 @@
 {
   'targets': [
     {
-      'target_name': 'binding',
+      'target_name': 'binding-<(target_arch)',
       'sources': [ 'src/noble_mac.mm', 'src/napi_objc.mm', 'src/ble_manager.mm', 'src/objc_cpp.mm', 'src/callbacks.cc'  ],
       'include_dirs': ["<!@(node -p \"require('node-addon-api').include\")"],
       'dependencies': ["<!(node -p \"require('node-addon-api').gyp\")"],
@@ -20,7 +20,7 @@
           '$(SDKROOT)/System/Library/Frameworks/CoreBluetooth.framework',
         ]
       },
-      'product_dir': '../lib/mac/native',
+      'product_dir': '../lib/mac/native'
     }
   ]
 }

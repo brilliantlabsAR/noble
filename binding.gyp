@@ -5,8 +5,8 @@
       'conditions': [
         ['OS=="mac"', {
           'dependencies': [
-            'lib/mac/binding.gyp:binding',
-          ],
+            'lib/mac/binding.gyp:binding-<(target_arch)',
+          ]
         }],
         ['OS=="win"', {
           'dependencies': [
